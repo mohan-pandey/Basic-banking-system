@@ -1,0 +1,135 @@
+-- Database: `mohan`
+
+
+--
+-- Table structure for table `contactus`
+--
+
+CREATE TABLE `contactus` (
+  `sr` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `message` mediumtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contactus`
+--
+
+INSERT INTO `contactus` (`sr`, `name`, `email`, `message`) VALUES
+(13, 'mohan pandey', 'mohan.official@gmail', 'What is the python course fee?'),
+(14, 'Rohit', 'abb6595@gmail.com', 'This is a demo paregraph!'),
+(15, 'Rohit', 'hbs326095@gmail.com', 'This is a para!'),
+(16, '', '', ''),
+(17, '', '', ''),
+(18, '', '', ''),
+(19, 'mohan pandey', 'pp12@gmail.com', 'this is my new contact email');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transactions`
+--
+
+CREATE TABLE `transactions` (
+  `sr` int(11) NOT NULL,
+  `sender` varchar(10) NOT NULL,
+  `receiver` varchar(10) NOT NULL,
+  `amount` bigint(20) NOT NULL,
+  `status` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `transactions`
+--
+
+INSERT INTO `transactions` (`sr`, `sender`, `receiver`, `amount`, `status`) VALUES
+(1, '7311780855', '5353112532', 200, 'succeed'),
+(2, '', '', 0, 'failed'),
+(3, '', '', 0, 'failed'),
+(4, '', '', 0, 'failed'),
+(5, '', '', 0, 'failed'),
+(6, '9111780855', '5653112532', 1000, 'succeed'),
+(7, '9111780855', '5853112532', 0, 'failed'),
+(8, '9111780855', '4601286186', 2000, 'succeed'),
+(9, '9111780855', '4801286186', 5030, 'succeed'),
+(10, '63917416800', '4901286186', 1400, 'succeed'),
+(11, '', '', 0, 'failed'),
+(12, '5411780855', '40501286186', 99500, 'succeed'),
+(13, '4801286186', '74311780855', 5020, 'succeed'),
+(14, '4901286186', '15353112532', 8900, 'succeed');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `sr` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `accno` varchar(10) NOT NULL,
+  `blc` bigint(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`sr`, `name`, `email`, `accno`, `blc`) VALUES
+(3, 'mohan pandey', 'mohan@gmail.com', '9353112532', 21100),
+(4, 'pavan pandey', 'kunal@gmail.com', '47311780855', 10000),
+(5, 'vyom e', 'aenna@gmail.com', '14001286186', 5010000),
+(6, 'Manohar', 'manohar@gmail.com', '21097481093', 16000),
+(7, 'Payal', 'payal@gmail.com', '5859722581', 18200),
+(8, 'qayamudin sheekh', 'maula@gmail.com', '4920438199', 20000),
+(9, 'rajan', 'rajan@gmail.com', '9304807119', 16100),
+(10, 'ram R', 'ram@gmail.com', '1384625500', 10900),
+(11, 'Shri kant', 'shrikant@gmail.com', '3917416800', 13900),
+(12, 'Gaura ', 'gan1esh@gmail.com', '5002694111', 19000);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `contactus`
+--
+ALTER TABLE `contactus`
+  ADD PRIMARY KEY (`sr`);
+
+--
+-- Indexes for table `transactions`
+--
+ALTER TABLE `transactions`
+  ADD PRIMARY KEY (`sr`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`sr`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `contactus`
+--
+ALTER TABLE `contactus`
+  MODIFY `sr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `transactions`
+--
+ALTER TABLE `transactions`
+  MODIFY `sr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `sr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+COMMIT;
